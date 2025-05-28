@@ -1,0 +1,13 @@
+[build]
+  publish = "public"
+  command = "npm run build" # Jika ada build step (contoh: React/Vue)
+
+[[redirects]]
+  from = "/videos/*"
+  to = "/404.html" # Blok akses langsung ke video
+  status = 200
+
+[[redirects]]
+  from = "/auth/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
